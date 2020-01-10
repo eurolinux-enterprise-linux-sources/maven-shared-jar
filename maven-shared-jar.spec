@@ -1,6 +1,6 @@
 Name:           maven-shared-jar
 Version:        1.1
-Release:        7%{?dist}
+Release:        8%{?dist}
 # Maven-shared defines maven-shared-jar version as 1.1
 Epoch:          1
 Summary:        Maven JAR Utilities
@@ -11,6 +11,7 @@ Source0:        http://repo1.maven.org/maven2/org/apache/maven/shared/%{name}/%{
 BuildArch:      noarch
 
 BuildRequires:  maven-local
+BuildRequires:  mvn(org.apache.maven.shared:maven-shared-components)
 BuildRequires:  mvn(org.codehaus.plexus:plexus-component-metadata)
 BuildRequires:  mvn(org.apache.bcel:bcel)
 BuildRequires:  mvn(org.apache.maven:maven-model)
@@ -66,6 +67,10 @@ find -name 'pom.xml' -exec sed \
 
 
 %changelog
+* Fri Aug  1 2014 Mikolaj Izdebski <mizdebsk@redhat.com> - 1:1.1-8
+- Add missing build-requires on maven-shared
+- Resolves: rhbz#1074931
+
 * Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1:1.1-7
 - Mass rebuild 2013-12-27
 
