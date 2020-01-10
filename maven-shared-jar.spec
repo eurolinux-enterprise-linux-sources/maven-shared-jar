@@ -1,6 +1,6 @@
 Name:           maven-shared-jar
 Version:        1.1
-Release:        6%{?dist}
+Release:        7%{?dist}
 # Maven-shared defines maven-shared-jar version as 1.1
 Epoch:          1
 Summary:        Maven JAR Utilities
@@ -66,6 +66,9 @@ find -name 'pom.xml' -exec sed \
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1:1.1-7
+- Mass rebuild 2013-12-27
+
 * Thu Sep 19 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 1:1.1-6
 - Fix BuildRequires
 
